@@ -1,0 +1,263 @@
+images.image: "e_theme_title.png" COMP;
+images.image: "about_theme_background.png" COMP;
+
+styles
+{
+   style {
+      name: "theme_about_style";
+      base: "font=Pinnacle:style=Regular font_size=16 style=glow color=#3d3465ff glow_color=#6756ae20 glow2_color=#2c225a10 align=center wrap=word";
+
+      tag:  "br" "\n";
+      tag:  "hilight" "+ font=Pinnacle:style=Regular";
+      tag:  "link" "+ font=Pinnacle:style=Light style=glow color=#17416a glow2_color=#fe87 glow_color=#fa14 font_size=12 align=center wrap=word";
+   }
+   style {
+      name: "theme_about2_style";
+      base: "font=Pinnacle:style=Light font_size=12 style=glow color=#17416aff glow_color=#1e6a9610 glow2_color=#1e6a9610 align=center wrap=word";
+
+      tag:  "br" "\n";
+      tag:  "hilight" "+ font=Pinnacle:style=Regular";
+      tag:  "link" "+ font=Pinnacle:style=Light style=glow color=#17416a glow2_color=#fe87 glow_color=#fa14 font_size=12 align=center wrap=word";
+   }
+}
+
+color_classes {
+   color_class {
+      name: "Secret1";
+      color: 255 255 255 255;
+   }
+   color_class {
+      name: "Secret2";
+      color: 255 255 255 255;
+   }
+}
+
+group {
+   name: "e/theme/about";
+   min: 468 428;
+   max: 468 428;
+   script {
+	public color1() {
+		const a = 255;
+		new r = round(randf() * 255.0, FLOOR);
+		new g = round(randf() * 255.0, FLOOR);
+		new b = round(randf() * 255.0, FLOOR);
+		set_color_class("Secret1", r, g, b, a);
+		}
+
+	public color2() {
+		const a = 255;
+		new t = round(randf() * 255.0, FLOOR);
+		new o = round(randf() * 255.0, FLOOR);
+		new m= round(randf() * 255.0, FLOOR);
+		set_color_class("Secret2", t, o, m, a);
+		}
+   }
+   parts {
+      part {
+	 name:          "base";
+	 mouse_events:  0;
+	 description {
+	    state:    "default" 0.0;
+      min: 468 428;
+      max: 468 428;
+      rel1.offset: -2 -2;
+      rel2.offset: -2 -2;
+	    image {
+	       normal: "about_theme_background.png";
+         border: 8 8 8 8;
+	    }
+	    fill {
+	       smooth: 0;
+	    }
+	 }
+      }
+      part {
+	 name:          "title";
+	 mouse_events:  1;
+	 description {
+	    state:    "default" 0.0;
+	    min: 459 83;
+	    max: 459 83;
+	    align: 0.5 0.0;
+	    rel1.relative:   0.0  0.00;
+	    rel2.relative:   1.0  1.0;
+	    image.normal: "e_theme_title.png";
+	    color: 255 255 255 255;
+	 }
+	 description {
+	    state:    "easter" 0.0;
+	    inherit:  "default" 0.0;
+	    color_class: "Secret1";
+	 }
+	 description {
+	    state:    "egg" 0.0;
+	    inherit:  "easter" 0.0;
+	    color_class: "Secret2";
+	 }
+      }
+      part {
+	 name:          "about";
+	 type:          TEXTBLOCK;
+	 mouse_events:  0;
+	 description {
+	    state:    "default" 0.0;
+      rel1.to: "base";
+      rel2.to: "base";
+	    rel1.relative: 0.0 0.22;
+	    rel2.relative: 1.0 0.65;
+      align: 0.5 1.0;
+      color: FN_COL_DEFAULT;
+	    text {
+	       style:    "theme_about_style";
+	       min:      0 1;
+	       text:
+         "Vertex - A point where higher dimensional geometric objects meet.</br></br>";
+      }
+	 }
+      }
+      part {
+	 name:          "about2";
+	 type:          TEXTBLOCK;
+	 mouse_events:  0;
+	 description {
+	    state:    "default" 0.0;
+	    rel1.relative: 0.0 0.4;
+	    rel2.relative: 1.0 1.0;
+      align: 0.5 0.5;
+      color: FN_COL_DEFAULT;
+	    text {
+	       style:    "theme_about2_style";
+	       min:      0 1;
+	       text:
+         "This is a theme inspired by and designed to be used with the Vertex gtk theme.</br> <a href=\"https://github.com/horst3180/vertex-theme\">https://github.com/horst3180/vertex-theme</a></br></br>"
+         "Theme Design by <a href=\"https://simotek.net/tech/\">@Simotek</a></br></br>"
+         "Wallpaper by @dymokotov <a href=\"https://pxhere.com/en/photo/1445391\">https://pxhere.com/en/photo/1445391</a>";
+	    }
+	 }
+      }
+      part {
+	 name:          "button";
+	 type:          IMAGE;
+	 mouse_events:  1;
+	 description {
+	    state:    "default" 0.0;
+	    min:        32 32;
+	    max:        32 32;
+	    align:	1.0 1.0;
+	    rel1 {
+	       relative: 0.0  0.0;
+	       offset:   6    -6;
+	    }
+	    rel2 {
+	       relative: 1.0  1.0;
+	       offset:   -13    -12;
+	    }
+	    image {
+	       normal: "e_surface.png";
+	       border: 8 8 8 8;
+	    }
+	    color_class: "Button";
+	 }
+	 description {
+	    state:    "clicked" 0.0;
+	    inherit:  "default" 0.0;
+	    rel1.offset: 4 5;
+	    rel2.offset: -5 -6;
+	 }
+      }
+      part {
+	 name:          "button_text";
+	 type:          TEXT;
+	 effect:        SHADOW;
+	 mouse_events:  0;
+   description { state: "default" 0.0;
+      //rel1.offset: 6 9;
+      rel1.to_x: "button";
+      rel1.to_y: "button";
+      //rel2.offset: -7 -7;
+      rel2.to: "button";
+      // color: FN_COL_DEFAULT;
+      color: 255 255 255 255;
+      text { font: FN; size: 10;
+         min: 1 1;
+         ellipsis: -1;
+         align: 0.5 0.5;
+         text_class: "button";
+         text: "Ok";
+      }
+   }
+      }
+   }
+   programs {
+      program {
+	 name:   "button_click";
+	 signal: "mouse,down,1";
+	 source: "button";
+	 action: STATE_SET "clicked" 0.0;
+	 target: "button";
+      }
+      program {
+	 name:   "button_unclick";
+	 signal: "mouse,up,1";
+	 source: "button";
+	 action: STATE_SET "default" 0.0;
+	 target: "button";
+      }
+      program {
+	 name:   "button_unclick2";
+	 signal: "mouse,clicked,1";
+	 source: "button";
+	 action: SIGNAL_EMIT "e,action,close" "";
+      }
+
+      program {
+	 name:   "title_color";
+	 signal: "mouse,in";
+	 source: "title";
+	 script {
+	    color1();
+         }
+	 after: "easter";
+      }
+      program {
+	 name:   "easter";
+	 action: STATE_SET "easter" 0.0;
+	 target: "title";
+	 transition: ACCELERATE 1.0;
+	 after:  "egg_set";
+      }
+      program {
+	 name:   "egg_set";
+	 script {
+	    color2();
+         }
+	 after: "egg";
+      }
+      program {
+	 name:   "egg";
+	 action: STATE_SET "egg" 0.0;
+	 target: "title";
+	 transition: ACCELERATE 1.0;
+	 after:  "title_color";
+      }
+      program {
+	 name:   "easter_is_over";
+	 signal: "mouse,out";
+	 source: "title";
+	 action: ACTION_STOP;
+	 target: "easter";
+	 target: "egg";
+	 target: "egg_set";
+	 target: "title_color";
+	 in: 1.0 0.0;
+	 after:  "reset_title";
+      }
+      program {
+	 name:   "reset_title";
+	 action: STATE_SET "default" 0.0;
+	 target: "title";
+	 transition: ACCELERATE 1.0;
+      }
+   }
+}
