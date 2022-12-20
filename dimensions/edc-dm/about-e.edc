@@ -17,7 +17,7 @@ group { name: "e/widgets/about/main";
          tag: "br" "\n";
       }
       style { name: "authors_style";
-         base: "font="FNBD" font_size=16 align=left text_class=tb_plain color=#00000044 wrap=none";
+         base: "font="FNBD" font_size=16 align=left text_class=tb_plain color=#88888890 wrap=none";
          tag: "hilight" "+ font="FNBD" text_class=tb_light color=#00A1FF44";
          tag: "title" "+ font_size=24 font="FNBD" text_class=tb_big";
          tag: "/title" "- \n \n";
