@@ -6,6 +6,7 @@
 #define WIN_BACKGROUND 255 255 255 255
 
 #define HIGHLIGHT2 243 156 18 255
+#define DIALOG_BASE 50 50 50 255
 
 
 #define PROC_CPU_ALL 0 161 255 255
@@ -693,7 +694,7 @@ color_classes {
       desc: "Text of the winlist's title";
    }
    color_class { name: "dialog_base";
-      color: WIN_BACKGROUND;
+      color: DIALOG_BASE;
       desc: "Base color of a dialog window";
    }
    color_class { name: "shelf_base";

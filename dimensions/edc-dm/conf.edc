@@ -5,7 +5,7 @@ group { name: "e/widgets/configure/main";
       part { name: "base"; type: RECT;
          description { state: "default" 0.0;
             color_class: "dialog_base";
-            color: 213 212 212 0;
+            //~ color: 213 212 212 0;
          }
       }
       part { name: "e.swallow.content"; type: SWALLOW;

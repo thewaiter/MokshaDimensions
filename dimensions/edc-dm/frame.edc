@@ -19,8 +19,8 @@ group { name: "e/widgets/frame";
             rel1.offset: 2 0;
             rel1.to_y: "top";
             rel2.offset: -3 -3;
-            color_class: "frame_base";
-            color: 213 212 212 255;
+            color_class: "dialog_base";
+            //~ color: 213 212 212 255;
          }
       }
       part { name: "top";
