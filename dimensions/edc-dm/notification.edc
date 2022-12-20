@@ -26,7 +26,7 @@
             rel1.to: "base";
             rel1.offset: -3 0;
             rel2.to: "base";
-            rel2.offset: -3 0;
+            rel2.offset: -3 2;
             state: "default" 0.0;
             color: 255 255 255 255;
             color3: 0 0 0 32;
