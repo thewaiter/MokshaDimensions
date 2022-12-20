@@ -246,7 +246,7 @@ group { name: "e/modules/ibar/menu";
          action: STATE_SET "default" 0.0;
          target: "sizer";
          target: "clip";
-         transition: SINUSOIDAL 0.2;
+         //~ transition: SINUSOIDAL 0.2;
          after: "show2";
       }
       program { name: "show2";
@@ -257,7 +257,7 @@ group { name: "e/modules/ibar/menu";
          action: STATE_SET "hidden" 0.0;
          target: "sizer";
          target: "clip";
-         transition: SINUSOIDAL 0.2;
+         //~ transition: SINUSOIDAL 0.2;
          after: "hide2";
       }
       program { name: "hide2";
@@ -313,8 +313,8 @@ group { name: "e/modules/ibar/menu/item";
             rel2.offset: 2 -3;
             align: 0.0 0.5;
             aspect: 1.0 1.0; aspect_preference: BOTH;
-            min: 48 48;
-            max: 48 48;
+            min: 32 32;
+            max: 32 32;
          }
       }
       part { name: "shadow"; mouse_events: 0;
