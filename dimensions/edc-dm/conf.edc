@@ -1,6 +1,5 @@
 group { name: "e/widgets/configure/main";
    images.image: "bevel_dark_out.png" COMP;
-   images.image: "frame_horiz.png" COMP;
    parts {
       part { name: "base"; type: RECT;
          description { state: "default" 0.0;

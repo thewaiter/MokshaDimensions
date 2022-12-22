@@ -1938,10 +1938,6 @@ group { name: "e/modules/efm_navigation/main";
    alias: "modules/efm_navigation/main";
    images.image: "shadow_inset_light.png" COMP;
    images.image: "shadow_angled_in_light.png" COMP;
-   images.image: "toolbar_nav_back.png" COMP;
-   images.image: "toolbar_nav_favorites.png" COMP;
-   images.image: "toolbar_nav_forward.png" COMP;
-   images.image: "toolbar_nav_refresh.png" COMP;
    images.image: "toolbar_nav_up.png" COMP;
    images.image: "toolbar_nav_left.png" COMP;
    images.image: "toolbar_nav_right.png" COMP;
@@ -2091,7 +2087,6 @@ group { name: "e/modules/efm_navigation/main";
 
 group { name: "e/modules/efm_navigation/pathbar_button";
    alias: "modules/efm_navigation/pathbar_button";
-   images.image: "top_bottom_glow.png" COMP;
    parts {
       part { name: "e.text.label"; type: TEXT; mouse_events: 0;
          effect: SHADOW BOTTOM;
@@ -2183,7 +2178,6 @@ group { name: "e/modules/efm_navigation/pathbar_scrollframe";
    images.image: "sym_right_light_normal.png" COMP;
    images.image: "sym_left_glow_normal.png" COMP;
    images.image: "sym_right_glow_normal.png" COMP;
-   images.image: "horiz_bar_inset.png" COMP;
    parts {
       part { name: "clipper"; type: RECT;
          description { state: "default" 0.0;
