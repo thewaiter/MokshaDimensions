@@ -910,10 +910,9 @@ group { name: "e/fileman/default/window/main";
          description { state: "default" 0.0;
          }
       }
-      part { name: "bevel";
+      part { name: "bevel"; type: RECT;
          description { state: "default" 0.0;
             color: 0 0 0 0;
-            fill.smooth: 0;
          }
       }
       part { name: "e.swallow.favorites"; type: SWALLOW;
