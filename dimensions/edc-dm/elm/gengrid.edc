@@ -29,6 +29,7 @@ group { name: "elm/gengrid/item/default/default";
             color: 255 255 255 128; \
          } \
          description { state: "odd" 1.0; \
+            inherit: "default"; \
             color: 255 255 255 190; \
          } \
       } \
