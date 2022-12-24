@@ -2,14 +2,12 @@
    group { name: _NAME; \
       inherit: _SRC; \
       parts { \
-         part { name: "base"; \
+         part { name: "base"; type: RECT; \
             description { state: "default" 0.0; \
-               color: 230 230 230 255; \
-               color_class: "list_item_base_odd"; \
+               color_class: "dialog_base"; \
             } \
             desc { "odd"; \
-               color: 230 230 230 255; \
-               color_class: "list_item_base_odd"; \
+               color_class: "dialog_base"; \
             } \
          } \
       } \
