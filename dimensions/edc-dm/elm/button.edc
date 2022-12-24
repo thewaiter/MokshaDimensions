@@ -128,11 +128,12 @@ group { name: "elm/button/base/default";
             visible: 0;
          }
       }
-      image { "highlight"; nomouse;
+      rect { "highlight"; nomouse;
       {
          desc { "default";
             rel1.to: "base";
             rel2.to: "base";
+            color: 255 255 255 0;
             visible: 0;
          }
          desc { "visible";
