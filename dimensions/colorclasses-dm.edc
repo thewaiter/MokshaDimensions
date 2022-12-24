@@ -1035,7 +1035,7 @@ color_classes {
       desc: "Text of a disabled tags item";
    }
    color_class { "elm/win/background";
-      color: 213 212 212 255;
+      color: DIALOG_BASE;
       desc: "Background color of a standard window";
    }
    color_class { "elm/win/blocker";
