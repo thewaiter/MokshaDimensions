@@ -165,10 +165,10 @@ group {
 	 description {
 	    state:    "default" 0.0;
 	    rel1 {
-	       offset:   0 0;
+	       offset:   1 1;
 	    }
 	    rel2 {
-	       offset:   -1    -1;
+	       offset:   -2 -2;
 	    }
 	 }
       }
