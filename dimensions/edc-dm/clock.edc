@@ -74,7 +74,10 @@ group { name: "e/modules/clock/digital";
          for (i = 0; i < 14; i += 2) {
             set_state(parts[i], "custom", 0.0);
          }
-         set_min_size(tot * mul, 16);
+         if (mul == 4)
+           set_min_size(tot * mul, 16);
+         else
+           set_min_size(tot * mul * 1.8, 16);
          set_max_size(tot * 8 * mul, 128);
          emit("e,state,sizing,changed", "");
       }
@@ -116,6 +119,7 @@ group { name: "e/modules/clock/digital";
          if (dosec) {
             v = round(second, FLOOR);
             v = v % 60;
+
             tim = timer(1.0 - (second - v), "clock_cb", 1);
             // set seconds to v
             valset("s0", v / 10);
@@ -427,14 +431,14 @@ group { name: "e/modules/clock/digital";
              text { font: FN; size: 8;
                 text_class: "module_small";
                 align: 0.5 0.5;
+                text: "Tod, 12/30/2011";
+                size_range: 6 10;
                 min: 0 1;
              }
              fixed: 0 1;
-             visible: 0;
           }
           description { state: "date" 0.0;
              inherit: "default" 0.0;
-             visible: 1;
              fixed: 1 1;
              text.min: 1 1;
              text.ellipsis: -1;
