@@ -70,6 +70,11 @@ group { name: "e/widgets/check";
             color_class: "check_text_disabled";
             color3: 255 255 255 255;
          }
+         description { state: "focused" 0.0;
+            inherit: "default" 0.0;
+            color_class: border_title_active;
+            color3: 255 255 255 255;
+         }
       }
       part { name: "event"; type: RECT;
          ignore_flags: ON_HOLD;
@@ -114,6 +119,18 @@ group { name: "e/widgets/check";
          target: "clip";
          target: "e.text.label";
          target: "event";
+      }
+      program {
+         name: "focus_in";
+         signal: "e,state,focused"; source: "e";
+         action: STATE_SET "focused" 0.0;
+         target: "e.text.label";
+      }
+      program {
+         name: "focus_out";
+         signal: "e,state,unfocused"; source: "e";
+         action: STATE_SET "default" 0.0;
+         target: "e.text.label";
       }
    }
 }

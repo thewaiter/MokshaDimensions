@@ -26,9 +26,9 @@
             rel1.to: "base";
             rel1.offset: -1 0;
             rel2.to: "base";
-            rel2.offset: -1 2;
+            rel2.offset: -1 -3;
             state: "default" 0.0;
-            color: 255 255 255 255;
+            color: 203 209 219 255;
             color3: 0 0 0 32;
             color_class: "module_label";
             visible: 1;

@@ -95,6 +95,11 @@ group { name: "e/widgets/slider_horizontal";
             visible: 1;
             max: 99999 99999;
          }
+         description { state: "focused" 0.0;
+            inherit: "active" 0.0;
+            color_class: border_title_active;
+            color3: 255 255 255 255;
+         } 
       }
       part { name: "clip2"; type: RECT;
          description { state: "default" 0.0;
@@ -220,6 +225,18 @@ group { name: "e/widgets/slider_horizontal";
          target: "clip1";
          target: "clip2";
       }
+      program {
+         name: "focus_in";
+         signal: "e,state,focused"; source: "e";
+         action: STATE_SET "focused" 0.0;
+         target: "e.text.label";
+      }
+      program {
+         name: "focus_out";
+         signal: "e,state,unfocused"; source: "e";
+         action: STATE_SET "active" 0.0;
+         target: "e.text.label";
+      } 
    }
 }
 
@@ -320,6 +337,11 @@ group { name: "e/widgets/slider_vertical";
             visible: 1;
             max: 99999 99999;
          }
+         description { state: "focused" 0.0;
+            inherit: "active" 0.0;
+            color_class: border_title_active;
+            color3: 255 255 255 255;
+         } 
       }
       part { name: "clip2"; type: RECT;
          description { state: "default" 0.0;
@@ -445,5 +467,17 @@ group { name: "e/widgets/slider_vertical";
          target: "clip1";
          target: "clip2";
       }
+      program {
+         name: "focus_in";
+         signal: "e,state,focused"; source: "e";
+         action: STATE_SET "focused" 0.0;
+         target: "e.text.label";
+      }
+      program {
+         name: "focus_out";
+         signal: "e,state,unfocused"; source: "e";
+         action: STATE_SET "active" 0.0;
+         target: "e.text.label";
+      } 
    }
 }
