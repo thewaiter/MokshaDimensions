@@ -19,15 +19,16 @@ group { name:"e/modules/tasks/item";
 
             color: 255 255 255 255;
 
-            visible: 0;
+            //~ visible: 1;
          }
          description { state: "visible" 0.0;
             inherit: "default" 0.0;
-            visible: 1;
+            color: 155 155 155 255;
+            //~ visible: 1;
          }
          description { state: "hilighted" 0.0;
             inherit: "default" 0.0;
-            visible: 1;
+            //~ visible: 1;
          }
       }
       part { name: "sel_label"; type: TEXT; mouse_events: 0;
@@ -236,13 +237,13 @@ group { name:"e/modules/tasks/item";
       program {
          signal: "e,state,focused"; source: "e";
          action: STATE_SET "hilighted" 0.0;
-         transition: DECELERATE 0.2;
+         //~ transition: DECELERATE 0.1;
          target: "sel_highlight";
          after: "focus2";
       }
       program { name: "focus2";
          action: STATE_SET "visible" 0.0;
-         transition: SINUSOIDAL 0.3;
+         //~ transition: SINUSOIDAL 0.1;
          target: "sel_highlight";
       }
       program {
