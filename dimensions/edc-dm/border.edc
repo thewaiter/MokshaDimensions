@@ -555,6 +555,13 @@ group {
          color: 0 0 0 0;
       }
    }
+     part { name: "e.event.titlebar"; type: RECT;
+         description { state: "default" 0.0;
+            rel1.to: "title_bar";
+            rel2.to: "title_bar";
+            color: 0 0 0 0;
+        }
+     }
    part { name: "e.event.resize.t"; type: RECT;
       description { state: "default" 0.0;
          fixed: 0 1;
@@ -652,13 +659,6 @@ group {
             color: 0 0 0 0;
          }
       }
-      part { name: "e.event.titlebar"; type: RECT;
-         description { state: "default" 0.0;
-            rel1.to: "title_bar";
-            rel2.to: "title_bar";
-            color: 0 0 0 0;
-        }
-     }
      part { name: "procstats"; type: RECT;
          repeat_events: 1;
          description { state: "default" 0.0;
