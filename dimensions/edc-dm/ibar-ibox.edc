@@ -244,9 +244,9 @@ group { name: "e/modules/ibar/menu";
          clip_to: "clip";
          description { state: "default";
             rel1.to: "sizer";
-            rel1.offset: 6 2;
+            rel1.offset: 12 12;
             rel2.to: "sizer";
-            rel2.offset: -7 -3;
+            rel2.offset: -13 -13;
             box { layout: "vertical";
                padding: 0 0;
                align: 0.5 0.5;
@@ -328,13 +328,14 @@ group { name: "e/modules/ibar/menu/item";
          }
       }
       part { name: "icon"; type: SPACER;
+         scale: 1;
          description { state: "default";
             rel1.offset: 2 2;
             rel2.offset: 2 -3;
             align: 0.0 0.5;
             aspect: 1.0 1.0; aspect_preference: BOTH;
-            min: 48 48;
-            max: 48 48;
+            min: 20 20;
+            max: 20 20;
          }
       }
       part { name: "shadow"; mouse_events: 0;
@@ -374,6 +375,16 @@ group { name: "e/modules/ibar/menu/item";
          description { state: "default";
             rel1.to: "icon";
             rel2.to: "icon";
+         }
+         description { state: "bounce1" 0.0;
+            inherit: "default" 0.0;
+            rel1.relative: 0.0 0.15;
+            rel2.relative: 1.0 1.15;
+         }
+         description { state: "bounce2" 0.0;
+            inherit: "default" 0.0;
+            rel1.relative: 0.0 -0.15;
+            rel2.relative: 1.0 0.85;
          }
       }
       part { name: "e.text.title"; type: TEXT; mouse_events: 0;
@@ -466,6 +477,29 @@ group { name: "e/modules/ibar/menu/item";
          target: "icon_clip";
          target: "glow";
          transition: DECELERATE 0.2;
+      }
+      program {
+         signal: "e,state,urgent"; source: "e";
+         action: STATE_SET "bounce1" 0.0;
+         target: "e.swallow.icon";
+         after: "urg1";
+      }
+      program { name: "urg1";
+         action: STATE_SET "bounce2" 0.0;
+         transition: DECELERATE 0.2;
+         target: "e.swallow.icon";
+         after: "urg2";
+      }
+      program { name: "urg2";
+         action: STATE_SET "bounce1" 0.0;
+         transition: ACCELERATE 0.2;
+         target: "e.swallow.icon";
+         after: "urg1";
+      }
+      program {
+         signal: "e,state,not_urgent"; source: "e";
+         action: STATE_SET "default" 0.0;
+         target: "e.swallow.icon";
       }
    }
 }
