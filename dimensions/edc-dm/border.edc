@@ -958,8 +958,8 @@ group { name: "e/widgets/border/left_controls/border";
       }
       
      BORDER_BUTTON2("close","close",0.0,0.0,22,3,"whole",0.0,1.0,25,10,"title2")
-     BORDER_BUTTON2("maximize","maximize",1.0,0.0,3,0,"close",1.0,1.0,23,-1,"close")
-     BORDER_BUTTON2("minimize","minimize",1.0,0.0,3,0,"maximize",1.0,1.0,23,-1,"maximize")
+     BORDER_BUTTON2("maximize","maximize",1.0,0.0,3,0,"close",1.0,1.0,25,-1,"close")
+     BORDER_BUTTON2("minimize","minimize",1.0,0.0,3,0,"maximize",1.0,1.0,25,-1,"maximize")
     
 
      part { name: "e.swallow.icon"; type: SWALLOW;
