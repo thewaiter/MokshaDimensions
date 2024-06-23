@@ -911,7 +911,7 @@ group { name: "e/widgets/border/left_controls/border";
        part { name: "t1"; type: RECT;
          description { state: "default" 0.0;
             align: 0.0 0.0;
-            min: 80 0;
+            //~ min: 80 0;
             aspect: 1.0 1.0; aspect_preference: VERTICAL;
             rel1.relative: 0.0  0.0;
             //~ rel2.relative: 1.0 1.0;
@@ -957,10 +957,6 @@ group { name: "e/widgets/border/left_controls/border";
          }
       }
       
-       //~ BORDER_BUTTON_ADV("close","close",0.0,0.0,12,0,"whole", "whole",0.0,1.0,30,5,"whole", "title2")
-       //~ BORDER_BUTTON("maximize","maximize",1.0,0.0,5,0,"close",1.0,1.0,28,0,"close")
-       //~ BORDER_BUTTON("minimize","minimize",1.0,0.0,5,-2,"maximize",1.0,1.0,28,0,"maximize")
-       
      BORDER_BUTTON2("close","close",0.0,0.0,22,3,"whole",0.0,1.0,25,10,"title2")
      BORDER_BUTTON2("maximize","maximize",1.0,0.0,3,0,"close",1.0,1.0,23,-1,"close")
      BORDER_BUTTON2("minimize","minimize",1.0,0.0,3,0,"maximize",1.0,1.0,23,-1,"maximize")
