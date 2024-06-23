@@ -911,10 +911,9 @@ group { name: "e/widgets/border/left_controls/border";
        part { name: "t1"; type: RECT;
          description { state: "default" 0.0;
             align: 0.0 0.0;
-            //~ min: 80 0;
+            min: 75 0;
             aspect: 1.0 1.0; aspect_preference: VERTICAL;
             rel1.relative: 0.0  0.0;
-            //~ rel2.relative: 1.0 1.0;
             rel2.offset: 0 11;
             rel2.to_y: "title2";
             color: 255 255 255 0;
@@ -956,11 +955,10 @@ group { name: "e/widgets/border/left_controls/border";
             visible: 1;
          }
       }
-      
-     BORDER_BUTTON2("close","close",0.0,0.0,22,3,"whole",0.0,1.0,25,10,"title2")
+
+     BORDER_BUTTON2("close","close",0.0,0.0,22,3,"whole",0.0,1.0,28,10,"title2")
      BORDER_BUTTON2("maximize","maximize",1.0,0.0,3,0,"close",1.0,1.0,25,-1,"close")
      BORDER_BUTTON2("minimize","minimize",1.0,0.0,3,0,"maximize",1.0,1.0,25,-1,"maximize")
-    
 
      part { name: "e.swallow.icon"; type: SWALLOW;
          description { state: "default" 0.0;
