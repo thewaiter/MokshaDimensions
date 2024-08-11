@@ -193,7 +193,7 @@ group { name: "e/widgets/menu/default/label";
          scale: 1;
          description { state: "default" 0.0;
             rel1.offset: 5 2;
-            rel2.offset: -4 -1;
+            rel2.offset: -10 -1;
             color_class: "menu_item";
             color3: 255 255 255 255;
             text { font: FN; size: 10;
