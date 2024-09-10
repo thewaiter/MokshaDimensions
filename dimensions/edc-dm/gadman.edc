@@ -16,8 +16,8 @@ group { name: "e/gadman/popup";
       }
       part { name: "e.swallow.content"; type: SWALLOW; clip_to: "clip";
          description { state: "default" 0.0;
-            rel1.offset: 10 10;
-            rel2.offset: -10 -10;
+            rel1.offset:  10  5;
+            rel2.offset: -10 -5;
          }
       }
       part { name: "clip"; type: RECT;
