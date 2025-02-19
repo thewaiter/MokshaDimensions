@@ -8,7 +8,7 @@ externals.external: "elm";
 // compat issues
 data.item: "version" "125";
 data.item: "efl_theme_base" "dark";
-data.item: "icon-theme" "MokshaDimensions-Icons";
+data.item: "icon-theme" "MokshaDimensions";
 data.item: "gtk-theme" "Vertex-Dark";
 
 collections {
