@@ -105,16 +105,14 @@ group { name: "e/modules/battery/main";
             fill.smooth: 0;
          }
       }
-      part { name: "top";
+            part { name: "top";
          clip_to: "pulse_clip";
          description { state: "default" 0.0;
             rel1.to: "base";
-            rel1.offset: 6 4;
+            rel1.relative: (24/160) (16/160);
+            rel1.offset: 0 -2;
             rel2.to: "base";
-            rel2.offset: -7 4;
-            rel2.relative: 1.0 0.0;
-            aspect: (112/24) (112/24); aspect_preference: HORIZONTAL;
-            align: 0.5 0.0;
+            rel2.relative: (136/160) (40/160);
             image.normal: "bat_top0.png";
          }
       }
@@ -122,11 +120,10 @@ group { name: "e/modules/battery/main";
          clip_to: "pulse_clip";
          description { state: "default" 0.0;
             rel1.to: "base";
-            rel1.offset: 6 -5;
+            rel1.relative: (24/160) (132/160);
             rel2.to: "base";
-            rel2.offset: -7 -5;
-            aspect: (112/12) (112/12); aspect_preference: HORIZONTAL;
-            align: 0.5 1.0;
+            rel2.relative: (136/160) (144/160);
+            rel2.offset: 0 0;
             image.normal: "bat_bottom0.png";
          }
       }
@@ -214,41 +211,36 @@ group { name: "e/modules/battery/main";
          description { state: "default" 0.0;
             align: 0.5 0.0;
             rel1.to: "bg";
-            rel1.offset: 0 -2;
+            rel1.offset: 0 -4;
             rel2.relative: 1.0 0.0;
             rel2.to_x: "bg";
             rel2.to_y: "pwr";
             rel2.offset: -1 2;
-            //~ color_class: "module_label_plain";
+            //~ color_class: "module_label";
             color: 255 255 255 255;
-            color3: 24 24 24 192;
-            text { font: "Sans";
-               fit: 1 1;
+            color3: 32 32 32 192;
+            text { font: "Sans"; size: 6;
                ellipsis: -1;
-               align: 0.5 0.5;
                text_class: "module_small";
             }
          }
       }
       part { name: "e.text.time"; type: TEXT; mouse_events: 0;
          scale: 1;
-         effect: SHADOW ;
+         effect: SHADOW;
          clip_to: "info_clip";
          description { state: "default" 0.0;
             align: 0.5 1.0;
             rel1.relative: 0.0 1.0;
-            rel1.offset: 0 -2;
             rel1.to_x: "bg";
             rel1.to_y: "pwr";
             rel2.offset: -1 1;
             rel2.to: "bg";
             //~ color_class: "module_label_plain";
             color: 255 255 255 255;
-            color3: 24 24 24 192;
-            text { font: "Sans";
-               fit: 1 1;
+            color3: 32 32 32 192;
+            text { font: "Sans"; size: 6;
                ellipsis: -1;
-               align: 0.5 0.5;
                text_class: "module_small";
             }
          }
