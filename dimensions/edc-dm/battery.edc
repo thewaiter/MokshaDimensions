@@ -105,7 +105,7 @@ group { name: "e/modules/battery/main";
             fill.smooth: 0;
          }
       }
-            part { name: "top";
+      part { name: "top";
          clip_to: "pulse_clip";
          description { state: "default" 0.0;
             rel1.to: "base";
@@ -348,7 +348,7 @@ group { name: "e/modules/battery/popup";
             step: 5 5;
          }
       }
-       part { name: "pwr1";
+      part { name: "pwr1";
          clip_to: "pulse_clip";
          description { state: "default" 0.0;
             rel1.to: "pwr";
