@@ -3,7 +3,9 @@
 
 printf "\n\033[1;33mWARNING:\033[0m For use with Bodhi Linux 7 only.\n\n"
 cd dimensions
-sed -i 's/MokshaDimensions/MokshaDimensions-Icons/g' default-dm.edc
+sed -i \
+    -e 's/item: "icon-theme" *"[^"]*"/item: "icon-theme"    "MokshaDimensions-Icons"/' \
+    default-dm.edc
 ./build.sh
-sed -i 's/MokshaDimensions-Icons/MokshaDimensions/g' default-dm.edc
+git restore default-dm.edc
 cd ..
